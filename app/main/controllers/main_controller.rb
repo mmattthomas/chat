@@ -30,7 +30,7 @@ module Main
     def scroll_bottom
       `
        var newscrollHeight = $('.panel-body').attr('scrollHeight') - 20;
-       alert('newscrollHeight:' + newscrollHeight);
+       //alert('newscrollHeight:' + newscrollHeight);
        $('.panel-body').animate({ scrollTop: newscrollHeight }, 'normal');
       `
     end
