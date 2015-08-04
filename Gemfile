@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.1.2"    #specific ruby verion
+#ruby "2.1.2"    #specific ruby verion
 
 gem 'volt', '~> 0.9.4'
 
@@ -19,6 +19,8 @@ gem 'volt-user_templates', '~> 0.4.0'
 
 # Add ability to send e-mail from apps.
 gem 'volt-mailer', '~> 0.1.0'
+
+gem 'opal-jquery'
 
 # Use rbnacl for message bus encrpytion
 # (optional, if you don't need encryption, disable in app.rb and remove)
