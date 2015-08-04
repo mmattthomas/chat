@@ -1,4 +1,7 @@
-# By default Volt generates this controller for your Main component
+if RUBY_ENGINE == 'opal'
+  require 'opal-jquery'
+end
+
 module Main
   class MainController < Volt::ModelController
 
@@ -28,11 +31,8 @@ module Main
     end
 
     def scroll_bottom
-      `
-       var newscrollHeight = $('.panel-body').attr('scrollHeight') - 20;
-       //alert('newscrollHeight:' + newscrollHeight);
-       $('.panel-body').animate({ scrollTop: newscrollHeight }, 'normal');
-      `
+      panel_body = Element.find(".panel-body")
+      panel_body.animate({ scrollTop: panel_body.children.height }, speed: "normal")
     end
 
 
